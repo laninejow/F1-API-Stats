@@ -1,0 +1,141 @@
+:root {
+  --dropdown-width: 200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Karla', sans-serif;
+  background-color: #f4f4f4;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.race-name {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.side-section {
+  flex: 1;
+  background: #FFCB8F;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.side-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.driver-info {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff3e6;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.card-container {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordion {
+  background: #FFCB8F;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.driver-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.driver-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.driver-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+}
+
+.accordion-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-input {
+  background-color: #dcffdc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
