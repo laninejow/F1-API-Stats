@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 Race Filter</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Karla', sans-serif;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    background-image: url(./race_page.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+h1{
+    text-align: center;
+
+    width: 70%;
+    font-family: 'Karla', sans-serif;
+    font-weight: 900;
+    font-size: 156px;
+    color: #000000;
+}
+.filter-section{
+    display: flex;
+    width: 100%;
+    /* height: 500px; */
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    background: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: 'Karla', sans-serif;
+
+}
+.form-section-container{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    width: 70%;
+    font-size: large;
+}
+.form-section{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/*SELECT*/
+
+
+.box select {
+    background: #F28507;
+  color: white;
+  padding: 12px;
+  width: 200px;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+/* .box::before {
+  content: "\f13a";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+} */
+
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+  padding: 30px;
+}
+input{
+    background: #F28507;
+  color: white;
+  padding: 12px;
+  width: 200px;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #434346;
+  -webkit-text-fill-color: #F1F1F1;
+  -webkit-box-shadow: #F28507;
+  transition: background-color 5000s ease-in-out 0s;
+};
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Formula Won</h1>
+        <div class="filter-section">
+            <h3>Select Filters</h3>
+            <form action="drivers.html" method="get">
+                <div class="form-section-container">
+                    <div class="form-section">
+                        <label for="filter"><h3>Filter by:</h3></label>
+                        <div class="box">
+                            <select name="filter" id="filter">
+                                <option value="year">Year</option>
+                                <option value="race">Race Name</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <label for="value"><h3>Select Value:</h3></label>
+                        <input type="text" name="value" id="value" required>
+                    </div>
+                </div>
+                    <button type="submit">Submit</button>
+                
+            </form>
+        </div>
+    </main>
+</body>
+</html>

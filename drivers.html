@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Driver Information</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+      main{
+        /* width: 100%;
+        height: 100vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        background-image:url(./race_page.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 60px;
+      }
+        .accordion {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;        
+        width: 90%;
+    
+        }
+        .accordion-item {
+            /* border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 16px 0;
+            overflow: hidden; */
+        background: #FFCB8F;
+        border: 1px solid #000;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid #000000;
+        width: calc((100% / 3) - (50px / 3));
+        height: max-content;
+        }
+        .accordion-header {
+            padding: 15px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+        }
+        .driver-section {
+        display: flex;
+        justify-content: start;
+        gap: 10px;
+        align-items: center;
+        }
+        .driver-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 20%;
+        overflow: hidden;
+        border: solid 1px purple;
+        }
+        .driver-img img {
+        width: 100%;
+        }
+        .driver-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .driver-name {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .driver-team {
+            margin: 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .stat {
+            display: flex;
+        justify-content: space-between;
+        width: 100%;
+        }
+        /* .stat h5 {
+            margin: 0;
+            margin-right: 8px;
+        } */
+        .accordion-content {
+            display: none;
+            padding: 16px;
+        }
+        .accordion-content.active {
+            display: block;
+            width: 100%;
+        }
+        .accordion-content-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        background: #FFCB8F;
+        }
+        .stat-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .stat-info h5 {
+            margin: 0;
+            font-size: 1em;
+        }
+        .info-input {
+            display: flex;
+            align-items: center;
+        }
+        .info-input h5 {
+            margin: 0;
+            margin-left: 8px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Driver Information</h1>
+    <div id="results" class="accordion"></div>
+</main>
+    <script src="drivers.js"></script>
+</body>
+</html>
